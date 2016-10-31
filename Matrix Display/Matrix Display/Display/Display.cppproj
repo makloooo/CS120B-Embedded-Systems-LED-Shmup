@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.CPP</ToolchainName>
+    <ProjectGuid>dce6c7e3-ee26-4d79-826b-08594b9ad897</ProjectGuid>
+    <avrdevice>atmega328p</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>CPP</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <ArduinoProjectType>Sketch</ArduinoProjectType>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <Name>Display</Name>
+    <RootNamespace>Display</RootNamespace>
+    <ArduinoIdeDir>C:\Program Files (x86)\Arduino</ArduinoIdeDir>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress />
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue />
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>1</eraseonlaunchrule>
+    <AssemblyName>Display</AssemblyName>
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.30.1" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGccCpp>
+  <avrgcc.common.Device>-mmcu=atmega328p -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.0.98\gcc\dev\atmega328p"</avrgcc.common.Device>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>NDEBUG</Value>
+      <Value>F_CPU=16000000L</Value>
+      <Value>ARDUINO=10609</Value>
+      <Value>ARDUINO_AVR_UNO</Value>
+      <Value>ARDUINO_ARCH_AVR</Value>
+      <Value>USB_VID=0x2341</Value>
+      <Value>USB_PID=0x0043</Value>
+      <Value>USB_MANUFACTURER="\"Arduino LLC\""</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.0.98\include</Value>
+      <Value>%24(ProjectDir)\..\ArduinoCore\include\core</Value>
+      <Value>%24(ProjectDir)\..\ArduinoCore\include\variants\standard</Value>
+      <Value>..\include\libraries\Adafruit_GFX</Value>
+      <Value>..\include\libraries\Adafruit_GFX\Fonts</Value>
+      <Value>..\include\libraries\RGBmatrixPanel</Value>
+      <Value>..\include\libraries\RGBmatrixPanel\examples\colorwheel_progmem_32x32</Value>
+      <Value>..\include\libraries\LinkedList</Value>
+      <Value>..\include\libraries\MsTimer2</Value>
+      <Value>..\include\libraries\SPI\src</Value>
+      <Value>..\include\libraries\Wire\src</Value>
+      <Value>..\include\libraries\Wire\src\utility</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.OtherFlags>-fno-threadsafe-statics</avrgcc.compiler.optimization.OtherFlags>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcc.compiler.warnings.InhibitAllWarnings>True</avrgcc.compiler.warnings.InhibitAllWarnings>
+  <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcccpp.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>NDEBUG</Value>
+      <Value>F_CPU=16000000L</Value>
+      <Value>ARDUINO=10609</Value>
+      <Value>ARDUINO_AVR_UNO</Value>
+      <Value>ARDUINO_ARCH_AVR</Value>
+      <Value>USB_VID=0x2341</Value>
+      <Value>USB_PID=0x0043</Value>
+      <Value>USB_MANUFACTURER="\"Arduino LLC\""</Value>
+    </ListValues>
+  </avrgcccpp.compiler.symbols.DefSymbols>
+  <avrgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.0.98\include</Value>
+      <Value>%24(ProjectDir)\..\ArduinoCore\include\core</Value>
+      <Value>%24(ProjectDir)\..\ArduinoCore\include\variants\standard</Value>
+      <Value>..\include\libraries\Adafruit_GFX</Value>
+      <Value>..\include\libraries\Adafruit_GFX\Fonts</Value>
+      <Value>..\include\libraries\RGBmatrixPanel</Value>
+      <Value>..\include\libraries\RGBmatrixPanel\examples\colorwheel_progmem_32x32</Value>
+      <Value>..\include\libraries\LinkedList</Value>
+      <Value>..\include\libraries\MsTimer2</Value>
+      <Value>..\include\libraries\SPI\src</Value>
+      <Value>..\include\libraries\Wire\src</Value>
+      <Value>..\include\libraries\Wire\src\utility</Value>
+    </ListValues>
+  </avrgcccpp.compiler.directories.IncludePaths>
+  <avrgcccpp.compiler.optimization.level>Optimize for size (-Os)</avrgcccpp.compiler.optimization.level>
+  <avrgcccpp.compiler.optimization.OtherFlags>-fno-threadsafe-statics</avrgcccpp.compiler.optimization.OtherFlags>
+  <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
+  <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
+  <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
+  <avrgcccpp.compiler.warnings.InhibitAllWarnings>True</avrgcccpp.compiler.warnings.InhibitAllWarnings>
+  <avrgcccpp.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </avrgcccpp.linker.libraries.Libraries>
+  <avrgcccpp.linker.miscellaneous.LinkerFlags>-Os</avrgcccpp.linker.miscellaneous.LinkerFlags>
+  <avrgcccpp.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.0.98\include</Value>
+    </ListValues>
+  </avrgcccpp.assembler.general.IncludePaths>
+  <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
+</AvrGccCpp>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGccCpp>
+  <avrgcc.common.Device>-mmcu=atmega328p -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.0.98\gcc\dev\atmega328p"</avrgcc.common.Device>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+      <Value>F_CPU=16000000L</Value>
+      <Value>ARDUINO=10609</Value>
+      <Value>ARDUINO_AVR_UNO</Value>
+      <Value>ARDUINO_ARCH_AVR</Value>
+      <Value>USB_VID=0x2341</Value>
+      <Value>USB_PID=0x0043</Value>
+      <Value>USB_MANUFACTURER="\"Arduino LLC\""</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.0.98\include</Value>
+      <Value>%24(ProjectDir)\..\ArduinoCore\include\core</Value>
+      <Value>%24(ProjectDir)\..\ArduinoCore\include\variants\standard</Value>
+      <Value>..\include\libraries\Adafruit_GFX</Value>
+      <Value>..\include\libraries\Adafruit_GFX\Fonts</Value>
+      <Value>..\include\libraries\RGBmatrixPanel</Value>
+      <Value>..\include\libraries\RGBmatrixPanel\examples\colorwheel_progmem_32x32</Value>
+      <Value>..\include\libraries\LinkedList</Value>
+      <Value>..\include\libraries\MsTimer2</Value>
+      <Value>..\include\libraries\SPI\src</Value>
+      <Value>..\include\libraries\Wire\src</Value>
+      <Value>..\include\libraries\Wire\src\utility</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.OtherFlags>-fno-threadsafe-statics</avrgcc.compiler.optimization.OtherFlags>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcc.compiler.warnings.InhibitAllWarnings>True</avrgcc.compiler.warnings.InhibitAllWarnings>
+  <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcccpp.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+      <Value>F_CPU=16000000L</Value>
+      <Value>ARDUINO=10609</Value>
+      <Value>ARDUINO_AVR_UNO</Value>
+      <Value>ARDUINO_ARCH_AVR</Value>
+      <Value>USB_VID=0x2341</Value>
+      <Value>USB_PID=0x0043</Value>
+      <Value>USB_MANUFACTURER="\"Arduino LLC\""</Value>
+    </ListValues>
+  </avrgcccpp.compiler.symbols.DefSymbols>
+  <avrgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.0.98\include</Value>
+      <Value>%24(ProjectDir)\..\ArduinoCore\include\core</Value>
+      <Value>%24(ProjectDir)\..\ArduinoCore\include\variants\standard</Value>
+      <Value>..\include\libraries\Adafruit_GFX</Value>
+      <Value>..\include\libraries\Adafruit_GFX\Fonts</Value>
+      <Value>..\include\libraries\RGBmatrixPanel</Value>
+      <Value>..\include\libraries\RGBmatrixPanel\examples\colorwheel_progmem_32x32</Value>
+      <Value>..\include\libraries\LinkedList</Value>
+      <Value>..\include\libraries\MsTimer2</Value>
+      <Value>..\include\libraries\SPI\src</Value>
+      <Value>..\include\libraries\Wire\src</Value>
+      <Value>..\include\libraries\Wire\src\utility</Value>
+    </ListValues>
+  </avrgcccpp.compiler.directories.IncludePaths>
+  <avrgcccpp.compiler.optimization.level>Optimize for size (-Os)</avrgcccpp.compiler.optimization.level>
+  <avrgcccpp.compiler.optimization.OtherFlags>-fno-threadsafe-statics</avrgcccpp.compiler.optimization.OtherFlags>
+  <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
+  <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
+  <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
+  <avrgcccpp.compiler.warnings.InhibitAllWarnings>True</avrgcccpp.compiler.warnings.InhibitAllWarnings>
+  <avrgcccpp.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </avrgcccpp.linker.libraries.Libraries>
+  <avrgcccpp.linker.miscellaneous.LinkerFlags>-Os</avrgcccpp.linker.miscellaneous.LinkerFlags>
+  <avrgcccpp.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.0.98\include</Value>
+    </ListValues>
+  </avrgcccpp.assembler.general.IncludePaths>
+  <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
+</AvrGccCpp>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Bitmaps.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Adafruit_GFX.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeMono12pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeMono18pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeMono24pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeMono9pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeMonoBold12pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeMonoBold18pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeMonoBold24pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeMonoBold9pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeMonoBoldOblique12pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeMonoBoldOblique18pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeMonoBoldOblique24pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeMonoBoldOblique9pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeMonoOblique12pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeMonoOblique18pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeMonoOblique24pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeMonoOblique9pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeSans12pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeSans18pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeSans24pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeSans9pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeSansBold12pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeSansBold18pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeSansBold24pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeSansBold9pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeSansBoldOblique12pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeSansBoldOblique18pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeSansBoldOblique24pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeSansBoldOblique9pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeSansOblique12pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeSansOblique18pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeSansOblique24pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeSansOblique9pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeSerif12pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeSerif18pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeSerif24pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeSerif9pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeSerifBold12pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeSerifBold18pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeSerifBold24pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeSerifBold9pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeSerifBoldItalic12pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeSerifBoldItalic18pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeSerifBoldItalic24pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeSerifBoldItalic9pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeSerifItalic12pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeSerifItalic18pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeSerifItalic24pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\FreeSerifItalic9pt7b.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\Fonts\TomThumb.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Adafruit_GFX\gfxfont.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\MsTimer2\MsTimer2.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\RGBmatrixPanel\examples\colorwheel_progmem_32x32\image.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\RGBmatrixPanel\gamma.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\RGBmatrixPanel\RGBmatrixPanel.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Wire\src\utility\twi.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Wire\src\Wire.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Sketch.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\Adafruit_GFX\Adafruit_GFX.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\Adafruit_GFX\glcdfont.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\MsTimer2\MsTimer2.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\RGBmatrixPanel\RGBmatrixPanel.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\Wire\src\utility\twi.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\Wire\src\Wire.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Content Include="readme.html">
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ArduinoCore\ArduinoCore.cppproj">
+      <Name>ArduinoCore</Name>
+      <Project>dc6e1c3f-b431-4d4a-ada3-7ff45c2de331</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="include\" />
+    <Folder Include="include\libraries\" />
+    <Folder Include="include\libraries\Adafruit_GFX\" />
+    <Folder Include="include\libraries\Adafruit_GFX\Fonts\" />
+    <Folder Include="include\libraries\MsTimer2\" />
+    <Folder Include="include\libraries\RGBmatrixPanel\" />
+    <Folder Include="include\libraries\RGBmatrixPanel\examples\" />
+    <Folder Include="include\libraries\RGBmatrixPanel\examples\colorwheel_progmem_32x32\" />
+    <Folder Include="include\libraries\Wire\" />
+    <Folder Include="include\libraries\Wire\src\" />
+    <Folder Include="include\libraries\Wire\src\utility\" />
+    <Folder Include="src\" />
+    <Folder Include="src\libraries\" />
+    <Folder Include="src\libraries\Adafruit_GFX\" />
+    <Folder Include="src\libraries\MsTimer2\" />
+    <Folder Include="src\libraries\RGBmatrixPanel\" />
+    <Folder Include="src\libraries\Wire\" />
+    <Folder Include="src\libraries\Wire\src\" />
+    <Folder Include="src\libraries\Wire\src\utility\" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
