@@ -1,5 +1,5 @@
 <h2>Overview</h2>
-This is a Sh'mup engine written in C/C++ to be programmed to ATMega1284 chips and an Arduino respectively. However, due to time constraints and hardware limitations, the original project was scrapped in favor of a more basic game with lasers serving as its only projectile, rendering the project in an incomplete form. The UI and control logic is programmed on the ATMega1284 chips (written in C), while the game logic itself is written on an Arduino UNO (written in C++). Each game-object has animations.
+This is a Sh'mup engine written in C/C++ to be programmed to ATMega1284 chips and an Arduino respectively. This was created as the custom project for the CS120B Spring 2016 class at University of California, Riverside. However, due to time constraints and hardware limitations, the original project was scrapped in favor of a more basic game with lasers serving as its only projectile, rendering the project in an incomplete form. The UI and control logic is programmed on the ATMega1284 chips (written in C), while the game logic itself is written on an Arduino UNO (written in C++). Each game-object has animations.
 
 <h2>Design</h2>
 *Disclaimer: I am not implying this is a good design. I am merely explaining how I designed it on a whim without any advising.
